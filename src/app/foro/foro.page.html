@@ -1,0 +1,41 @@
+
+<ion-content class="ion-padding">
+  @for (item of personas; track item.id) {
+  <ion-card style="align-items: center; display: flex; flex-direction: column">
+    <img
+      alt="Silhouette of mountains"
+      src="{{item.picture.large}}"
+      style="border-radius: 100px; margin: 0px auto; display: block;"
+    />
+
+    <ion-card-header style="text-align: center">
+      <ion-card-title>
+        Excelente receta del pastel Ñero se me fue super útil, rápida y sobre
+        todo con pocos ingredientes le doy 10/10 las 3b facil y económica.
+      </ion-card-title>
+
+
+      <div style="font-size: inherit; margin-top: 8px;">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-text>Nombre: {{item.name.title}} {{item.name.first}}</ion-text><br />
+      <ion-text style="width: 100%">Ubicación: {{item.location.street.name}}</ion-text><br />
+      <ion-text>Ciudad: {{item.location.city}}</ion-text><br />
+      <ion-text>País: {{item.location.country}}</ion-text><br />
+      <ion-text>Email de contacto: {{item.email}}</ion-text><br />
+    </ion-card-content>
+  </ion-card>
+  }
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title style="text-align: center">Receta tu Reseña</ion-title>
+  </ion-toolbar>
+</ion-footer>
